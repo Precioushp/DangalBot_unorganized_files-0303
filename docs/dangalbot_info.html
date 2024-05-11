@@ -15,6 +15,10 @@
         <!--========== CSS ==========-->
         <link rel="stylesheet" href="./assets/css/styles.css">
 
+        <!--========== DARKMODE ==========-->
+        <link rel="stylesheet" href="./darkmode/darkmode.css">
+        <script src="darkmode/darkmode.js"></script>
+
         <!-- about css -->
         <link rel="stylesheet" href="./assets/css/about.css">
 
@@ -92,8 +96,12 @@
                                         <a href="Validators.html" class="nav__dropdown-item">Research Committee</a>
                                     </div>
                                 </div>
-
                             </div>
+                            <a href="#" class="nav__link">
+                                <button onclick="myFunction()" style="background: none;border: none; margin-left: -1px;"><i
+                                        class='bx bx-moon'></i></button>
+                                <span class="nav__name">Dark Mode</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -112,7 +120,8 @@
                         <img src="./images/tdblogo.png" alt="Dangal Bot Logo">
                     </div>
                     <div>
-                        <p> Dangal Bot is a chatbot developed to facilitate students with their concerns regarding academic
+                        <p> 
+                            Dangal Bot is a chatbot developed to facilitate students with their concerns regarding academic
                             announcements. The chatbot is intended to deliver information about crucial dates, deadlines, and
                             changes to academic agendas. It strives to improve communication between students and the universities
                             administration, keeping students informed and up to date on vital academic information.

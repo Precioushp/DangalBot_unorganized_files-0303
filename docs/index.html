@@ -12,7 +12,11 @@
 
 
         <!--========== CSS ==========-->
-        <link rel="stylesheet" href="./assets/css/styles.css">
+        <link rel="stylesheet" href="./assets/css/styles.css"> <!--Sidebar--->
+
+        <!--========== DARKMODE ==========-->
+        <link rel="stylesheet" href="./darkmode/darkmode.css">
+        <script src="darkmode/darkmode.js"></script>
 
         <!-- stylesheets are conveniently separated into components -->
         <link rel="stylesheet" media="all" href="./component/styles/setup.css">
@@ -64,31 +68,34 @@
                     <div class="nav__list">                    
                         <div class="nav__items">
                             <h3 class="nav__subtitle">Menu</h3>
-    
-                                <a href="researchers.html" class="nav__link">
-                                    <i class="bx bx-grid-alt"></i>
-                                    <span class="nav__name">About Us</span>
-                                </a>
 
-                                <a href="dangalbot_info.html" class="nav__link">
-                                    <i class='bx bx-bot'></i>
-                                    <span class="nav__name">Dangal Bot</span>
-                                </a>
+                            <a href="researchers.html" class="nav__link">
+                                <i class="bx bx-grid-alt"></i>
+                                <span class="nav__name">About Us</span>
+                            </a>
+
+                            <a href="dangalbot_info.html" class="nav__link">
+                                <i class='bx bx-bot'></i>
+                                <span class="nav__name">Dangal Bot</span>
+                            </a>
 
                             <div class="nav__dropdown">
                                 <a href="#" class="nav__link">
-                                    <i class='bx bx-group'></i>
-                                    <span class="nav__name">Acknowledgements</span>
-                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                        <i class='bx bx-group'></i>
+                                        <span class="nav__name">Acknowledgements</span>
+                                        <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
                                 </a>
-
                                 <div class="nav__dropdown-collapse">
                                     <div class="nav__dropdown-content">
                                         <a href="Validators.html" class="nav__dropdown-item">Research Committee</a>
                                     </div>
                                 </div>
-
                             </div>
+                            
+                            <a href="#" class="nav__link">
+                                <button onclick="myFunction()" style="background: none;border: none; margin-left: -5px;"><i class='bx bx-moon'></i></button>
+                                <span class="nav__name">Dark Mode</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -157,7 +164,7 @@
                 // "Basic chat-bubble Example" (1-basics.html)
                 var convo = {
                     ice: {
-                        says: ["Hi, Dangal ng Bayan!", "Here are the informations I have as of now"], // Greetings
+                        says: ["Hi, Dangal ng Bayan!", "Here are the informations I have as of now"], // Dangal Greetings
                         reply: [ // Choices button for the user
                             {
                                 question: "Graduation",
@@ -171,8 +178,8 @@
                         ]
                     },
                     "finish": {
-                        says: ["Thanks for using Dangal Bot",
-                            "Please click on the following link to complete a survey: <a href='https://forms.gle/5p7AeMTJimwQXcVA9' target='_blank'>Survey Form</a>"
+                        says: ["Thank you for using Dangal Bot!",
+                            "Share your thoughts on Dangal Bot! Your feedback helps us improve. Thanks! <a href='https://forms.gle/nwrQ9b4shD1iEerB7' target='_blank'>Survey Form</a>"
                         ],
                         reply: [
                             {
@@ -202,7 +209,7 @@
                                 answer: "tvl"
                             },
                             {
-                                question: "Back",
+                                question: "Previous",
                                 answer: "ice"
                             }
                         ],
@@ -223,7 +230,7 @@
                                 answer: "stem-h"
                             },
                             {
-                                question: "Back",
+                                question: "Previous",
                                 answer: "exam"
                             }
                         ]
@@ -240,21 +247,21 @@
                                 answer: "odde"
                             },
                             {
-                                question: "Back",
+                                question: "Previous",
                                 answer: "exam"
                             }
                         ]
                     },
                     "odde": {
                         says: ["<strong>Exam Schedule : STEM-E</strong> <br> \n\
-                                <strong>Day 1:</strong> March 19, 2024 <br> <strong>\n\
+                                <strong>Day 1:</strong> May 14, 2024 <br> <strong>\n\
                                 Subjects</strong> <br> \n\
                                 7:30 am-8:30 am : PE 4 <br> \n\
                                 8:30 am-9:00 am : BREAK <br> \n\
                                 9:00 am-10:00 am : CPAR <br> \n\
                                 10:00 am-10:30 am : BREAK <br> \n\
                                 10:30 am-12:00 nn : PHYS2 <br> <br> \n\
-                                <strong>Day 2:</strong> March 21, 2024 <br> \n\
+                                <strong>Day 2:</strong> May 16, 2024 <br> \n\
                                 <strong>Subjects</strong> <br> \n\
                                 7:30 am-8:30 am : MTECH <br> \n\
                                 8:30 am-9:00 am : BREAK <br> \n\
@@ -276,14 +283,14 @@
                     },
                     "evene": {
                         says: ["<strong>Exam Schedule: STEM-E</strong> <br> \n\
-                                <strong>Day 1:</strong> March 18, 2024 <br> <strong>\n\
+                                <strong>Day 1:</strong> May 13, 2024 <br> <strong>\n\
                                 Subjects</strong> <br> \n\
                                 7:30 am-8:30 am : PE 4 <br> \n\
                                 8:30 am-9:00 am : BREAK <br> \n\
                                 9:00 am-10:00 am : CPAR <br> \n\
                                 10:00 am-10:30 am : BREAK <br> \n\
                                 10:30 am-12:00 nn : PHYS2 <br> <br> \n\
-                                <strong>Day 2:</strong> March 20, 2024 <br> \n\
+                                <strong>Day 2:</strong> May 15, 2024 <br> \n\
                                 <strong>Subjects</strong> <br> \n\
                                 7:30 am-8:30 am : MTECH <br> \n\
                                 8:30 am-9:00 am : BREAK <br> \n\
@@ -315,21 +322,21 @@
                                 answer: "oddc"
                             },
                             {
-                                question: "Back",
+                                question: "Previous",
                                 answer: "exam"
                             }
                         ]
                     },
                     "evenc": {
                         says: ["<strong>Exam Schedule: STEM-C</strong> <br> \n\
-                                <strong>Day 1:</strong> March 18, 2024 <br> <strong>\n\
+                                <strong>Day 1:</strong> May 13, 2024 <br> <strong>\n\
                                 Subjects</strong> <br> \n\
                                 12:30nn-1:30pm : PE 4 <br> \n\
                                 1:30pm-2:00pm : BREAK <br> \n\
                                 2:00pm-3:00pm : CPAR <br> \n\
                                 3:00pm-3:30pm : BREAK <br> \n\
                                 3:30pm-5:00pm : PHYS2 <br> <br> \n\
-                                <strong>Day 2:</strong> March 20, 2024 <br> \n\
+                                <strong>Day 2:</strong> May 15, 2024 <br> \n\
                                 <strong>Subjects</strong> <br> \n\
                                 1:00pm-2:00pm : MTECH <br> \n\
                                 2:00pm-2:30pm : BREAK <br> \n\
@@ -351,14 +358,14 @@
                     },
                     "oddc": {
                         says: ["<strong>Exam Schedule: STEM-C</strong> <br> \n\
-                                <strong>Day 1:</strong> March 19, 2024 <br> <strong>\n\
+                                <strong>Day 1:</strong> May 14, 2024 <br> <strong>\n\
                                 Subjects</strong> <br> \n\
                                 12:30nn-1:30pm : PE 4 <br> \n\
                                 1:30pm-2:00pm : BREAK <br> \n\
                                 2:00pm-3:00pm : CPAR <br> \n\
                                 3:00pm-3:30pm : BREAK <br> \n\
                                 3:30pm-5:00pm : PHYS2 <br> <br> \n\
-                                <strong>Day 2:</strong> March 21, 2024 <br> \n\
+                                <strong>Day 2:</strong> May 16, 2024 <br> \n\
                                 <strong>Subjects</strong> <br> \n\
                                 1:00pm-2:00pm : MTECH <br> \n\
                                 2:00pm-2:30pm : BREAK <br> \n\
@@ -390,21 +397,21 @@
                                 answer: "oddh"
                             },
                             {
-                                question: "Back",
+                                question: "Previous",
                                 answer: "exam"
                             }
                         ]
                     },
                     "oddh": {
                         says: ["<strong>Exam Schedule: STEM-H</strong> <br> \n\
-                                <strong>Day 1:</strong> March 19, 2024 <br> <strong>\n\
+                                <strong>Day 1:</strong> May 14, 2024 <br> <strong>\n\
                                 Subjects</strong> <br> \n\
                                 7:30 am-8:30 am : PE 4 <br> \n\
                                 8:30 am-9:00 am : BREAK <br> \n\
                                 9:00 am-10:00 am : CPAR <br> \n\
                                 10:00 am-10:30 am : BREAK <br> \n\
                                 10:30 am-12:00 nn : PHYS2 <br> <br> \n\
-                                <strong>Day 2:</strong> March 21, 2024 <br> \n\
+                                <strong>Day 2:</strong> May 16, 2024 <br> \n\
                                 <strong>Subjects</strong> <br> \n\
                                 7:30 am-8:30 am : MTECH <br> \n\
                                 8:30 am-9:00 am : BREAK <br> \n\
@@ -426,14 +433,14 @@
                     },
                     "evenh": {
                         says: ["<strong>Exam Schedule: STEM-H</strong> <br> \n\
-                                <strong>Day 1:</strong> March 18, 2024 <br> <strong>\n\
+                                <strong>Day 1:</strong> May 13, 2024 <br> <strong>\n\
                                 Subjects</strong> <br> \n\
                                 7:30 am-8:30 am : PE 4 <br> \n\
                                 8:30 am-9:00 am : BREAK <br> \n\
                                 9:00 am-10:00 am : CPAR <br> \n\
                                 10:00 am-10:30 am : BREAK <br> \n\
                                 10:30 am-12:00 nn : PHYS2 <br> <br> \n\
-                                <strong>Day 2:</strong> March 20, 2024 <br> \n\
+                                <strong>Day 2:</strong> May 15, 2024 <br> \n\
                                 <strong>Subjects</strong> <br> \n\
                                 7:30 am-8:30 am : MTECH <br> \n\
                                 8:30 am-9:00 am : BREAK <br> \n\
@@ -465,32 +472,29 @@
                                 answer: "odda"
                             },
                             {
-                                question: "Back",
+                                question: "Previous",
                                 answer: "exam"
                             }
                         ]
                     },
                     "evena": {
                         says: ["<strong>Exam Schedule: ABM</strong> <br> \n\
-                                <strong>Day 1:</strong> March 18, 2024 <br> <strong>\n\
+                                <strong>Day 1:</strong> May 13, 2024 <br> <strong>\n\
                                 Subjects</strong> <br> \n\
                                 12:30nn-1:30pm : PE 4 <br> \n\
                                 1:30pm-2:00pm : BREAK <br> \n\
                                 2:00pm-3:00pm : CPAR <br> \n\
                                 3:00pm-3:30pm : BREAK <br> \n\
-                                3:30pm-5:00pm : AECO <br> <br> \n\
-                                <strong>Day 2:</strong> March 20, 2024 <br> \n\
+                                3:30pm-5:00pm : AECO <br> \n\
+                                5:00pm-5:30pm : BREAK <br> \n\
+                                5:30pm-6:30pm : ENTR <br> <br> \n\
+                                <strong>Day 2:</strong> May 15, 2024 <br> \n\
                                 <strong>Subjects</strong> <br> \n\
                                 1:00pm-2:00pm : MTECH <br> \n\
                                 2:00pm-2:30pm : BREAK <br> \n\
                                 2:30pm-4:00pm : BESR <br> \n\
                                 4:00pm-4:30pm : BREAK <br> \n\
-                                4:30pm-6:00pm : BLAW <br> <br>\n\
-                                <strong>Day 3:</strong> March 22, 2024 <br> \n\
-                                <strong>Subjects</strong> <br> \n\
-                                1:00pm-2:00pm : ENTR <br> \n\
-                                2:00pm-2:30pm : BREAK <br> \n\
-                                2:30pm-4:00pm : BESM <br>",
+                                4:30pm-6:00pm : BLAW",
                             "Is there anything I can do for you ?"
                         ],
                         reply: [
@@ -506,25 +510,22 @@
                     },
                     "odda": {
                         says: ["<strong>Exam Schedule: ABM</strong> <br> \n\
-                                <strong>Day 1:</strong> March 19, 2024 <br> <strong>\n\
+                                <strong>Day 1:</strong> May 14, 2024 <br> <strong>\n\
                                 Subjects</strong> <br> \n\
                                 12:30nn-1:30pm : PE 4 <br> \n\
                                 1:30pm-2:00pm : BREAK <br> \n\
                                 2:00pm-3:00pm : CPAR <br> \n\
                                 3:00pm-3:30pm : BREAK <br> \n\
-                                3:30pm-5:00pm : AECO <br> <br> \n\
-                                <strong>Day 2:</strong> March 21, 2024 <br> \n\
+                                3:30pm-5:00pm : AECO <br> \n\
+                                5:00pm-5:30pm : BREAK <br> \n\
+                                5:30pm-6:30pm : ENTR <br> <br> \n\
+                                <strong>Day 2:</strong> May 16, 2024 <br> \n\
                                 <strong>Subjects</strong> <br> \n\
                                 1:00pm-2:00pm : MTECH <br> \n\
                                 2:00pm-2:30pm : BREAK <br> \n\
                                 2:30pm-4:00pm : BESR <br> \n\
                                 4:00pm-4:30pm : BREAK <br> \n\
-                                4:30pm-6:00pm : BLAW <br> <br>\n\
-                                <strong>Day 3:</strong> March 22, 2024 <br> \n\
-                                <strong>Subjects</strong> <br> \n\
-                                1:00pm-2:00pm : ENTR <br> \n\
-                                2:00pm-2:30pm : BREAK <br> \n\
-                                2:30pm-4:00pm : BESM <br>",
+                                4:30pm-6:00pm : BLAW",
                             "Is there anything I can do for you ?"
                         ],
                         reply: [
@@ -550,14 +551,14 @@
                                 answer: "oddH"
                             },
                             {
-                                question: "Back",
+                                question: "Previous",
                                 answer: "exam"
                             }
                         ]
                     },
                     "evenH": {
                         says: ["<strong>Exam Schedule: HUMSS</strong> <br> \n\
-                                <strong>Day 1:</strong> March 18, 2024 <br> <strong>\n\
+                                <strong>Day 1:</strong> May 13, 2024 <br> <strong>\n\
                                 Subjects</strong> <br> \n\
                                 12:30nn-1:30pm : PE 4 <br> \n\
                                 1:30pm-2:00pm : BREAK <br> \n\
@@ -566,7 +567,7 @@
                                 3:30pm-5:00pm : AECO <br> \n\
                                 5:00pm-5:30pm : BREAK <br> \n\
                                 5:30pm-6:30pm : ENTR <br> <br> \n\
-                                <strong>Day 2:</strong> March 20, 2024 <br> \n\
+                                <strong>Day 2:</strong> May 15, 2024 <br> \n\
                                 <strong>Subjects</strong> <br> \n\
                                 1:00pm-2:00pm : MTECH <br> \n\
                                 2:00pm-2:30pm : BREAK <br> \n\
@@ -587,7 +588,7 @@
                     },
                     "oddH": {
                         says: ["<strong>Exam Schedule: HUMSS</strong> <br> \n\
-                                <strong>Day 1:</strong> March 19, 2024 <br> <strong>\n\
+                                <strong>Day 1:</strong> May 14, 2024 <br> <strong>\n\
                                 Subjects</strong> <br> \n\
                                 12:30nn-1:30pm : PE 4 <br> \n\
                                 1:30pm-2:00pm : BREAK <br> \n\
@@ -596,7 +597,7 @@
                                 3:30pm-5:00pm : AECO <br> \n\
                                 5:00pm-5:30pm : BREAK <br> \n\
                                 5:30pm-6:30pm : ENTR <br> <br> \n\
-                                <strong>Day 2:</strong> March 21, 2024 <br> \n\
+                                <strong>Day 2:</strong> May 16, 2024 <br> \n\
                                 <strong>Subjects</strong> <br> \n\
                                 1:00pm-2:00pm : MTECH <br> \n\
                                 2:00pm-2:30pm : BREAK <br> \n\
@@ -628,21 +629,21 @@
                                 answer: "oddt"
                             },
                             {
-                                question: "Back",
+                                question: "Previous",
                                 answer: "exam"
                             }
                         ]
                     },
                     "oddt": {
                         says: ["<strong>Exam Schedule: TVL</strong> <br> \n\
-                                <strong>Day 1:</strong> March 19, 2024 <br> <strong>\n\
+                                <strong>Day 1:</strong> May 14, 2024 <br> <strong>\n\
                                 Subjects</strong> <br> \n\
                                 7:30 am-8:30 am : PE 4 <br> \n\
                                 8:30 am-9:00 am : BREAK <br> \n\
                                 9:00 am-10:00 am : PHYSCI <br> \n\
                                 10:00 am-10:30 am : BREAK <br> \n\
                                 10:30 am-12:00 nn : COMPROG 4 <br> <br> \n\
-                                <strong>Day 2:</strong> March 21, 2024 <br> \n\
+                                <strong>Day 2:</strong> May 16, 2024 <br> \n\
                                 <strong>Subjects</strong> <br> \n\
                                 7:30 am-8:30 am : MTECH <br> \n\
                                 8:30 am-9:00 am : BREAK <br> \n\
@@ -664,14 +665,14 @@
                     },
                     "event": {
                         says: ["<strong>Exam Schedule: TVL</strong> <br> \n\
-                                <strong>Day 1:</strong> March 18, 2024 <br> <strong>\n\
+                                <strong>Day 1:</strong> May 13, 2024 <br> <strong>\n\
                                 Subjects</strong> <br> \n\
                                 7:30 am-8:30 am : PE 4 <br> \n\
                                 8:30 am-9:00 am : BREAK <br> \n\
                                 9:00 am-10:00 am : PHYSCI <br> \n\
                                 10:00 am-10:30 am : BREAK <br> \n\
                                 10:30 am-12:00 nn : COMPROG 4 <br> <br> \n\
-                                <strong>Day 2:</strong> March 20, 2024 <br> \n\
+                                <strong>Day 2:</strong> May 15, 2024 <br> \n\
                                 <strong>Subjects</strong> <br> \n\
                                 7:30 am-8:30 am : MTECH <br> \n\
                                 8:30 am-9:00 am : BREAK <br> \n\
@@ -701,6 +702,29 @@
                             {
                                 question: "Graduation Expenses",
                                 answer: "gradexpenses"
+                            },
+                            {
+                                question: "Graduation Preparation",
+                                answer: "gradprep"
+                            }
+                        ]
+                    },
+                    "gradprep": {
+                        says: ["<strong>June 11</strong> - Homeroom Graduation Meeting (to discuss DOs & DONTs during Grad) <br> \n\
+                                <strong>June 13</strong> - 14 Graduation Practice(CABS) <br> \n\
+                                <strong>June 18</strong> - MORNING Baccalaureate Mass & AFTERNOON Recognition(Awards) <br> \n\
+                                <strong>June 20</strong> - Final Rehearsal at Sta.Rosa Sports Complex <br> \n\
+                                <strong>June 21</strong> - Graduation Day",
+                            "Is there anything I can do for you ?"
+                        ],
+                        reply: [
+                            {
+                                question: "Yes, I want to go back",
+                                answer: "graduation"
+                            },
+                            {
+                                question: "No, thank you",
+                                answer: "finish"
                             }
                         ]
                     },

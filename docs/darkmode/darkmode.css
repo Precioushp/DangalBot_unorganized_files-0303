@@ -1,0 +1,13 @@
+.dark-mode {
+    background-color: #767676;
+    .nav, .header{
+        background-color: #6c6c6c;
+        --text-color: white !important;
+    }
+    .nav__link{
+        --text-color: white !important;
+    }
+    .header__logo{
+        --title-color: white !important;
+    }
+}
